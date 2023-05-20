@@ -1,0 +1,64 @@
+﻿@model VeiculosVenda.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    @* <dl class="row">
+    <dt class = "col-sm-2">
+    @Html.DisplayNameFor(model => model.Marca)
+    @Html.DisplayNameFor(model => model.Modelo)
+    @Html.DisplayNameFor(model => model.Ano)
+    @Html.DisplayNameFor(model => model.Placa)
+    @Html.DisplayNameFor(model => model.Km)
+    @Html.DisplayNameFor(model => model.Cor)
+    @Html.DisplayNameFor(model => model.Opcional)
+    </dt>
+    <dd class = "col-sm-10">
+    @Html.DisplayFor(model => model.Modelo)
+    @Html.DisplayFor(model => model.Marca)
+    @Html.DisplayFor(model => model.Modelo)
+    @Html.DisplayFor(model => model.Ano)
+    @Html.DisplayFor(model => model.Placa)
+    @Html.DisplayFor(model => model.Km)
+    @Html.DisplayFor(model => model.Cor)
+    @Html.DisplayFor(model => model.Opcional)
+    </dd>
+    </dl>*@
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Marca)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Modelo)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Ano)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Placa)</th>
+                    <th scope="col"> @Html.DisplayNameFor(model => model.Km)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Cor)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Opcional)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Marca)</td>
+                    <td>@Html.DisplayFor(model => model.Modelo)</td>
+                    <td>@Html.DisplayFor(model => model.Ano)</td>
+                    <td>@Html.DisplayFor(model => model.Placa)</td>
+                    <td>@Html.DisplayFor(model => model.Km)</td>
+                    <td>@Html.DisplayFor(model => model.Cor)</td>
+                    <td>@Html.DisplayFor(model => model.Opcional)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar página principal</a>
+</div>
