@@ -8,41 +8,42 @@
 
 <form asp-action="Create">
     <p>
-        <input type="submit" value="Cadastrar Veículo" class="btn btn-primary" />
+        <input type="submit" value="Cadastrar Veículo" class="btn btn-success" />
     </p>
-    <div class="table-responsive">
-        <table class="table table-bordered table-sm table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Marca)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Modelo)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Ano)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Placa)</th>
-                    <th scope="col"> @Html.DisplayNameFor(model => model.Km)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Cor)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Opcional)</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Detalhes</th>
-                    <th scope="col">Excluir</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Marca)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Modelo)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Ano)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Placa)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Km)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Cor)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Opcional)</td>
-                        <td><a asp-action="Edit" asp-route-id="@item.Id">Editar</a></td>
-                        <td><a asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
-                        <td><a asp-action="Delete" asp-route-id="@item.Id">Excluir</a></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
 </form>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-sm table-dark">
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Marca)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Modelo)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Ano)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Placa)</th>
+                <th scope="col"> @Html.DisplayNameFor(model => model.Km)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Cor)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Opcional)</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Marca)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Modelo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Ano)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Placa)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Km)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cor)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Opcional)</td>
+                    <td><a asp-action="Edit" asp-route-id="@item.Id">Editar</a></td>
+                    <td><a asp-action="Details" asp-route-id="@item.Id" style="color:green">Detalhes</a></td>
+                    <td><a asp-action="Delete" asp-route-id="@item.Id" style="color:red">Excluir</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

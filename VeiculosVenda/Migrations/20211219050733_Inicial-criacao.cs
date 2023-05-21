@@ -18,9 +18,9 @@ namespace VeiculosVenda.Migrations
                     Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ano = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Placa = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Km = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Km = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cor = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Opcional = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Opcional = table.Column<string>(type: "nvarchar(max)", nullable: true)
 
                 },
                 constraints: table =>
