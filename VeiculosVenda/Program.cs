@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
     (options => options.UseSqlServer
-    ("Data Source=DESKTOP-E6VV5VG\\SQLEXPRESS;Initial Catalog=DADOS_VENDAS;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"));
+    ("Data Source=DESKTOP-E6VV5VG\\SQLEXPRESS;Initial Catalog=DADOS_VENDA;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"));
 
 var app = builder.Build();
 
